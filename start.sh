@@ -38,7 +38,7 @@ if [[ "$TEMPLATE_NGINX_HTML" != "0" ]] ; then
     value=$(echo "$i" | cut -d'=' -f2)
     if [[ "$variable" != '%s' ]] ; then
       replace='\$\$_'${variable}'_\$\$'
-      find /usr/share/nginx/html -type f -exec sed -i -e 's/'${replace}'/'${value}'/g' {} \;
+      #find /usr/share/nginx/html -type f -exec sed -i -e 's/'${replace}'/'${value}'/g' {} \;
     fi
   done
 fi
